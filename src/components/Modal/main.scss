@@ -1,0 +1,40 @@
+.modal{
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    background-color: #fffbfb;
+    transform: scale(0);
+    transition: all ease 0.2s;
+    box-shadow: 0 10px 15px 5px rgb(139, 138, 138);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 14px 61px 29px 53px;
+
+    li{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 39px;
+        letter-spacing: -6.7332e-05px;
+        color: #000000;
+        cursor: pointer;
+        position: relative;
+        &::before{
+            content: "\2022";
+            position: absolute;
+            color: lightblue; 
+            font-weight: bold; 
+            display: inline-block;
+            margin-left: -0.6em;
+            font-size: 40px;
+        }
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &.active{
+        transform: scale(1);
+    }
+}

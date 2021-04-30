@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState }from 'react'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+}from 'react-router-dom'
+
+import './assets/styles/main.scss'
+
+
+
+import {
+  Home,
+  SingleProduct,
+  TopProduct,
+  Auth,
+  Chat
+}from './pages'
 
 function App() {
+  const [ 
+    token, SetToken
+]=useState(window.localStorage.getItem('sessionToken'))
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/product" component={SingleProduct}/>
+            <Route exact path="/topproduct" component={TopProduct}/>
+          </Switch>
+
+          {
+            token ? (
+              <Switch>
+                <Route path="/chat" component={Chat}/>
+              </Switch>
+            ):(
+              <Switch>
+                 <Route  path="/auth" render={() => <Auth SetToken={SetToken} token={token}/>}/>
+              </Switch>
+            )
+          }
+        </Router>
     </div>
   );
 }

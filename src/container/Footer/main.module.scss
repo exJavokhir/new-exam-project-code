@@ -1,0 +1,125 @@
+
+
+.container{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.footerTop{
+    background-color: #282B30;
+    padding: 24px 0 23px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footerLogo{
+    display: flex;
+    align-items: center;
+}
+
+.footSpan{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    display: block;
+    padding-left: 14px;
+    cursor: pointer;
+            &:hover{
+                color: #05F3B3;
+            }
+}
+
+.footerTitleh3{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #98A4B7;
+}
+.appstore{
+    padding-left: 4px;
+}
+
+.footerBottom{
+    background-color: #33383C;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footerUl{
+        h4{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            padding: 52px 0 12px 0;
+        }
+        .footerSpan{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 29px;
+            color: #878F99;
+            cursor: pointer;
+            &:hover{
+                color: #05F3B3;
+            }
+        }
+    }
+    .footerUlMM{
+        h4{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            padding: 35px 0 12px 0;
+        }
+        .footerSpan{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 29px;
+            color: #878F99;
+            cursor: pointer;
+            &:hover{
+                color: #05F3B3;
+            }
+        }
+    }
+}
+.footerFinish{
+    background-color: #33383C;
+    .container{
+        padding-top: 20px;
+        ul{
+            border-top: 1px solid #4C565E;
+            padding: 24px 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footerSpan{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 29px;
+            color: #878F99;
+            cursor: pointer;
+            &:hover{
+                color: #05F3B3;
+            }
+        }
+    }
+}  
+
